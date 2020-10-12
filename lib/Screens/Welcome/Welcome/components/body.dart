@@ -16,14 +16,18 @@ class Body extends StatelessWidget {
           children: <Widget>[
             Text(
               "note that",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35,
+                fontStyle: FontStyle.italic
+              ),
             ),
             SizedBox(
               height: size.height * 0.03,
             ),
             Image.asset(
               "assets/images/diary.jpg",
-              height: size.height * 0.5,
+              height: size.height * 0.4,
             ),
             SizedBox(
               height: size.height * 0.03,
@@ -37,7 +41,7 @@ class Body extends StatelessWidget {
               },
             ),
             RoundedButton(
-              text: "LOGIN",
+              text: "SIGN UP",
               color: kPrimaryLightColor,
               textColor: Colors.black,
               press: () {},

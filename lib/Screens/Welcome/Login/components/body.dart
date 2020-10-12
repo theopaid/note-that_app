@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:note_that/Screens/Welcome/Login/components/background.dart';
 import 'package:note_that/components/already_have_an_account_check.dart';
 import 'package:note_that/components/rounded_button.dart';
@@ -24,14 +25,15 @@ class Body extends StatelessWidget {
         children: <Widget>[
           Text(
             "LOGIN",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: size.height * 0.03,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
+              fontStyle: FontStyle.italic
+            ),
           ),
           Image.asset(
             "assets/images/diary.jpg",
-            height: size.height * 0.40,
+            height: size.height * 0.35,
           ),
           RoundedInputField(
             hintText: "Your Email",

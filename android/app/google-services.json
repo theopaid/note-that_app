@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "708256488861",
+    "firebase_url": "https://notethat-tp.firebaseio.com",
+    "project_id": "notethat-tp",
+    "storage_bucket": "notethat-tp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708256488861:android:382828f30ac6be344aa374",
+        "android_client_info": {
+          "package_name": "com.example.note_that"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708256488861-85lnslgrtuc7jph9ambc16rctg9roagk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKsuY_t5tqRwZISBk6TJimRz9vTNEeApg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708256488861-85lnslgrtuc7jph9ambc16rctg9roagk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:note_that/Screens/Welcome/Login/login_screen.dart';
+import 'package:note_that/Screens/Welcome/Signup/signup_screen.dart';
+import 'package:note_that/components/or_divider.dart';
 import 'package:note_that/components/rounded_button.dart';
+import 'package:note_that/components/social_icon.dart';
 import 'package:note_that/constants.dart';
 import 'background.dart';
 
@@ -44,7 +47,32 @@ class Body extends StatelessWidget {
               text: "SIGN UP",
               color: kPrimaryLightColor,
               textColor: Colors.black,
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return SignUpScreen();
+                  }),
+                );
+              },
+            ),
+            OrDivider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SocialIcon(
+                  iconSrc: "assets/icons/facebook.svg",
+                  press: () {},
+                ),
+                SocialIcon(
+                  iconSrc: "assets/icons/twitter.svg",
+                  press: () {},
+                ),SocialIcon(
+                  iconSrc: "assets/icons/google-plus.svg",
+                  press: () {},
+                ),
+
+              ],
             ),
           ],
         ),

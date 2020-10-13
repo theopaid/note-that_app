@@ -1,23 +1,16 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:note_that/Screens/Welcome/Login/components/background.dart';
-import 'package:note_that/Screens/Welcome/Signup/signup_screen.dart';
-import 'package:note_that/components/already_have_an_account_check.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:note_that/Screens/Welcome/Login/login_screen.dart';
+import 'package:note_that/Screens/Welcome/Signup/components/background.dart';
 import 'package:note_that/components/or_divider.dart';
+import 'package:note_that/components/already_have_an_account_check.dart';
 import 'package:note_that/components/rounded_button.dart';
 import 'package:note_that/components/rounded_input_field.dart';
 import 'package:note_that/components/rounded_password_field.dart';
 import 'package:note_that/components/social_icon.dart';
-import 'package:note_that/components/text_field_container.dart';
 import 'package:note_that/constants.dart';
 
 class Body extends StatelessWidget {
-  const Body({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -27,11 +20,12 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "LOGIN",
+              "SIGNUP",
               style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                  fontStyle: FontStyle.italic),
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                fontStyle: FontStyle.italic,
+              ),
             ),
             Image.asset(
               "assets/images/diary.jpg",
@@ -45,20 +39,18 @@ class Body extends StatelessWidget {
               onChanged: (value) {},
             ),
             RoundedButton(
-              text: "LOGIN",
+              text: "SIGNUP",
               press: () {},
             ),
             SizedBox(
               height: size.height * 0.03,
             ),
             AlreadyHaveAnAccountCheck(
+              login: false,
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return SignUpScreen();
-                  }),
-                );
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return LoginScreen();
+                }));
               },
             ),
             OrDivider(),
@@ -76,6 +68,7 @@ class Body extends StatelessWidget {
                   iconSrc: "assets/icons/google-plus.svg",
                   press: () {},
                 ),
+
               ],
             ),
           ],
@@ -84,3 +77,6 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
+
